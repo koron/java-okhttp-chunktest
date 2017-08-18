@@ -51,7 +51,6 @@ public class Chunk {
     public void run2() throws Exception {
         OkApacheClient client = new OkApacheClient();
         HttpGet get = new HttpGet(url);
-                "http://httpbin.org/stream-bytes/1024?chunk_size=256");
         HttpResponse resp = client.execute(get);
         HttpEntity entity = resp.getEntity();
         System.out.println(String.format(
